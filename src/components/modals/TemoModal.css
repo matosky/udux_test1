@@ -1,0 +1,86 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay with transparency */
+    z-index: 9998; /* Just below the modal */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for overlay */
+  }
+  
+  .overlay.show {
+    opacity: 1;
+  }
+  
+  #modal {
+    position: fixed;
+    top: -50%; /* Start position: off the screen above the top */
+    left: 50%;
+    transform: translate(-50%, 0); /* Adjust to match with top positioning */
+    z-index: 9999;
+    background: linear-gradient(180deg, #39452d 2.59%, #232b1a 99.97%, #9f6f2d 99.98%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: top 0.5s ease-in-out; /* Smooth transition for the modal */
+    width: 90%; /* Make the modal responsive */
+    max-width: 500px; /* Max width for larger screens */
+  }
+  
+  #modal.show {
+    top: 50%; /* Final position: centered on the screen */
+    transform: translate(-50%, -50%); /* Adjusted transform for center positioning */
+  }
+  
+  #modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  button {
+    background-color: #bb8233;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #9f6f2d;
+  }
+  
+  @media (max-width: 480px) {
+    #modal {
+      padding: 15px;
+      width: 95%;
+      max-width: 90%;
+    }
+  
+    #modal h1 {
+      font-size: 18px;
+    }
+  
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+
+.section {
+  margin-bottom: $spacing-xl;
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-md;
+  }
+
+  .section-title {
+    font-size: $font-size-large;
+    color: $text-color-primary;
+    font-family: 'Bw Modelica', sans-serif; 
+  }
+
+  .section-show-all {
+    font-size: $font-size-small;
+    color: $text-color-secondary;
+    text-decoration: none;
+
+    &:hover {
+      color: $text-color-primary;
+    }
+  }
+
+  .section-content {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding-bottom: $spacing-md; /* Add padding to avoid clipping of the scrollbar */
+
+    .card-grid {
+      display: flex;
+      gap: $spacing-md;
+      scroll-snap-type: x mandatory;
+
+      /* Ensures each card maintains its width and doesn't shrink */
+      .card {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+      }
+    }
+  }
+}

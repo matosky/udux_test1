@@ -1,0 +1,60 @@
+@import "../../styles/variables.scss";
+
+.banner {
+  height: $banner-height;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:  space-around;
+  color: $text-color-light;
+
+  background-color: #000; /* Background color inside the border */
+  padding: 10px 20px; /* Adjust padding as needed */
+  
+  border: 1px solid; /* Border thickness */
+  border-image-slice: 1; /* Necessary for border-image to work */
+  border-image-source: linear-gradient(90deg, #EC1B52 0%, #FCB816 100%);
+
+  .banner-content {
+    text-align: left;
+    max-width: 600px;
+    position: relative; // To position the logo correctly
+
+    .banner-logo {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 80px; // Adjust the size as needed
+    }
+
+    .banner-title {
+      font-size: $font-size-extra-large;
+      font-weight: bold;
+      line-height: 1.2;
+      white-space: nowrap;
+      font-family: 'Bw Modelica', sans-serif; 
+      margin-top: 40px; // Add space to accommodate the logo
+      margin-bottom: $spacing-sm;
+    }
+
+    .banner-description {
+      font-size: $font-size-medium;
+      line-height: 1.5;
+      font-family: 'Bw Modelica', sans-serif; 
+    }
+
+    .highlight {
+      color: #FCB816; // Assuming this is the yellow color used
+    }
+  }
+
+  .listen{
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+  }
+}

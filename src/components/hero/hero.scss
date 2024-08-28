@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+
+.hero {
+  h2{
+    font-family: 'Bw Modelica', sans-serif; 
+  }
+  .hero-welcome {
+    font-size: $font-size-extra-large;
+    color: $text-color-primary;
+    margin-bottom: $spacing-sm; // Correct usage with the new variable
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.tabs {
+  display: flex;
+  margin-bottom: $nav-item-margin-bottom; // Use $nav-item-margin-bottom for consistent spacing
+  
+  .tab {
+    background-color: transparent;
+    border: 1px solid $text-color-secondary;
+    color: $text-color-secondary;
+    padding: 8px 16px 8px 16px; // Adjust padding if necessary
+    font-size: $font-size-medium;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:not(:last-child) {
+      margin-right: $nav-item-margin-bottom; // Use $nav-item-margin-bottom for consistent spacing
+    }
+
+    &:hover,
+    &.active {
+      color: #F6B726;
+    }
+  }
+}
