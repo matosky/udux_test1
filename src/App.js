@@ -158,7 +158,7 @@ function App() {
           />
         </div>
       </Section>
-      {/* <TempModal open={open} handleClose={() => setOpen(false)} /> */}
+      <TempModal open={open} handleClose={() => setOpen(false)} />
     </Layout>
   );
 }
